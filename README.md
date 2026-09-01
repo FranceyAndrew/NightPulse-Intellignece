@@ -42,7 +42,7 @@ nightpulse-intelligence/\
 └── deployment/           # Docker, cloud configs, infrastructure\
 
 ## Architecture Overview
-NightPulse Intelligence follows a modular pipeline:
+NightPulse Intelligence follows a modular pipeline: \
 Data Sources -> Ingestion -> Preprocessing -> Forecast Engine -> Staffing Optimizer -> API -> Dashboard
 
 
