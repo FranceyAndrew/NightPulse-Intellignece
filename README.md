@@ -26,20 +26,20 @@ NightPulse Intelligence is a modular machine-learning system designed to forecas
 * Dashboard for visualizing weekly demand and operational instights
 
 ## Repository Structure
-nightpulse-intelligence/
-├── config/               # Settings, logging, credentials templates
-├── data/                 # Raw, processed, external, and feature data
-├── notebooks/            # Exploration and prototyping
-├── src/
-│   ├── ingestion/        # Weather, calendar, and sales loaders
-│   ├── preprocessing/    # Cleaning, merging, feature engineering
-│   ├── models/           # Forecasting models + evaluation
-│   ├── optimization/     # Staffing optimizer
-│   ├── api/              # FastAPI service
-│   ├── dashboard/        # UI components and app
-│   └── utils/            # Logging, validation, helpers
-├── tests/                # Unit and integration tests
-└── deployment/           # Docker, cloud configs, infrastructure
+nightpulse-intelligence/\
+── config/               # Settings, logging, credentials templates\
+── data/                 # Raw, processed, external, and feature data\
+├── notebooks/            # Exploration and prototyping\
+├── src/\
+│   ├── ingestion/        # Weather, calendar, and sales loaders\
+│   ├── preprocessing/    # Cleaning, merging, feature engineering\
+│   ├── models/           # Forecasting models + evaluation\
+│   ├── optimization/     # Staffing optimizer\
+│   ├── api/              # FastAPI service\
+│   ├── dashboard/        # UI components and app\
+│   └── utils/            # Logging, validation, helpers\
+├── tests/                # Unit and integration tests\
+└── deployment/           # Docker, cloud configs, infrastructure\
 
 ## Architecture Overview
 NightPulse Intelligence follows a modular pipeline:
