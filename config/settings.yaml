@@ -1,0 +1,39 @@
+project:
+  name: "NightPulse Intelligence"
+  version: "0.1.0"
+  environment: "development"  # development | staging | production
+  
+paths:
+  raw_data: "data/raw"
+  processed_data: "data/processed"
+  external_data: "data/external"
+  features: "data/features"
+
+forecast:
+  horizon_days: 7
+  include_weather: true
+  include_sports: true
+  include_university_calendar: true
+  include_competitor_data: true
+  include_social_media: true
+  include_google_trends: true
+  include_staffing_data: true
+
+model:
+  default_model: "xgboost"
+  prophet:
+    seasonality_mode: "multiplicative"
+    changepoint_prior_scale: 0.05
+  xgboost:
+    n_estimators: 300
+    learning_rate: 0.1
+    max_depth: 6
+  lstm:
+    sequence_length: 30
+    hidden_units: 64 
+    dropout: 0.2
+
+dashboard:
+  theme: "dark"
+  refresh_interval: 60  # in seconds
+
