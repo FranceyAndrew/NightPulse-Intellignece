@@ -43,6 +43,40 @@ nightpulse-intelligence/\
 
 ## Architecture Overview
 NightPulse Intelligence follows a modular pipeline: \
-Data Sources -> Ingestion -> Preprocessing -> Forecast Engine -> Staffing Optimizer -> API -> Dashboard
+<picture>
+  <!-- Dark mode -->
+  <source 
+    srcset="docs/images/Architecture-diagram-dark.png" 
+    media="(prefers-color-scheme: dark)"
+  />
+
+  <!-- Light mode -->
+  <source 
+    srcset="docs/images/Architecture-diagram-light.png" 
+    media="(prefers-color-scheme: light)"
+  />
+
+  <!-- Fallback (light mode) -->
+  <img 
+    src="docs/images/Architecture-diagram-light.png" 
+    alt="NightPulse Intelligence Architecture Diagram"
+    width="800"
+  />
+</picture>
+
+## Module Responsibilities
+
+| Module            | Purpose / Responsibilities |
+|-------------------|----------------------------|
+| **ingestion/**    | Load external data sources (weather, calendar, sales, events). Validate schemas and normalize raw inputs. |
+| **preprocessing/**| Clean, merge, and transform datasets. Handle feature engineering and dataset preparation for modeling. |
+| **models/**       | Train forecasting models, run evaluation, manage model artifacts, and generate predictions. |
+| **optimization/** | Compute staffing schedules using constraints, forecasts, and optimization logic. |
+| **api/**          | Expose predictions, schedules, and metadata through FastAPI endpoints. Handles request/response validation. |
+| **dashboard/**    | Visualize forecasts, staffing plans, KPIs, and analytics. Front‑end logic and UI components. |
+| **utils/**        | Shared helpers: logging, configuration loading, validation, common utilities used across modules. |
+| **tests/**        | Unit and integration tests mirroring the structure of `src/`. Ensures reliability and regression protection. |
+
+
 
 
