@@ -37,3 +37,53 @@ dashboard:
   theme: "dark"
   refresh_interval: 60  # in seconds
 
+location:
+  city: "Waterloo"
+  country: "CA"
+  name: "Revive Karaoke Bar"
+  location_url: f"https://nominatim.openstreetmap.org/search"
+
+  weekly_hours:
+    monday:
+      open: null
+      close: null
+      events: []
+    tuesday:
+      open: "20:00"
+      close: "02:00"
+      events: 
+        - name: open_mic
+          start: "20:00"
+          end: "22:00"
+    wednesday:
+      open: "22:00"
+      close: "02:00"
+      events: []
+    thursday:
+      open: "22:00"
+      close: "02:00"
+      events: []
+    friday:
+      open: "21:00"
+      close: "02:00"
+      events: []
+    saturday:
+      open: "21:00" 
+      close: "02:00"
+      events: []
+    sunday:
+      open: null
+      close: null
+      events: []
+  
+  promotions:
+      
+
+weather_api:
+  provider: "OpenWeather"
+  base_url: "https://api.openweathermap.org/data/2.5/onecall"
+  units: "metric"  # metric | imperial
+
+
+
+
